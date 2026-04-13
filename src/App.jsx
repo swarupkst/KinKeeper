@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Body from './body/home/Body'
 import Stats from './body/stats/Stats';
 import Timeline from './body/timeline/Timeline';
+import ErrorPage from './component/ErrorPage';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/" element={<Body />} />
         <Route path="/timeline" element={<Timeline />} />
         <Route path="/stats" element={<Stats />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
 
       <Footer />
