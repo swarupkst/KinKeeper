@@ -5,7 +5,7 @@ import Keenkeeper from './Keenkeeper'
 const Footer = () => {
   return (
     <div className='bg-[#244D3F]'>
-    <div className='w-10/12 mx-auto '>
+    <div className='sm:w-10/12 mx-auto '>
     <Keenkeeper />
     <hr className='text-[#1A8862]'/>
       <Copyright />

@@ -3,6 +3,7 @@ import { RiHome2Line } from "react-icons/ri";
 import { IoTimeOutline } from "react-icons/io5";
 import { ImStatsDots } from "react-icons/im";
 
+import { NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -18,9 +19,11 @@ const Navbar = () => {
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-[#64748B] font-medium">
         
-      <li><a><RiHome2Line />Home</a></li>
-      <li> <a><IoTimeOutline />Timeline</a></li>
-      <li><a><ImStatsDots />Stats</a></li>
+      <li><a><RiHome2Line /><NavLink to="/">Home</NavLink></a></li>
+      <li> <a><IoTimeOutline /><NavLink to="/timeline">Timeline</NavLink></a></li>
+      <li><a><ImStatsDots /><NavLink to="/stats">Stats</NavLink></a></li>
+      
+      
     </ul>
     </div>
     <a className=" text-2xl font-extrabold">Keen<span className='font-semibold text-[#244D3F]'>Keeper</span></a>
@@ -28,9 +31,9 @@ const Navbar = () => {
  
   <div className="navbar-end hidden lg:flex ">
     <ul className="menu menu-horizontal px-1 text-lg text-[#64748B] font-medium">
-      <li><a><RiHome2Line />Home</a></li>
-      <li> <a><IoTimeOutline />Timeline</a></li>
-      <li><a><ImStatsDots />Stats</a></li>
+      <li><a><RiHome2Line /><NavLink to="/">Home</NavLink></a></li>
+      <li> <a><IoTimeOutline /><NavLink to="/timeline">Timeline</NavLink></a></li>
+      <li><a><ImStatsDots /><NavLink to="/stats">Stats</NavLink></a></li>
     </ul>
   </div>
 </div>
