@@ -1,5 +1,8 @@
 import Bodytop from './bodytop/Bodytop'
 import Bodyfriend from './bodyfriend/Bodyfriend'
+import React, { Suspense } from "react";
+import Loader from '../../component/Loader';
+
 
 const Body = () => {
 
@@ -8,7 +11,9 @@ const Body = () => {
       <div className='w-full sm:w-11/12 mx-auto '>
         <Bodytop />
         <hr className='text-[#E9E9E9] mx-5 sm:mx-8 pt-10' />
-        <Bodyfriend />
+            <Suspense fallback={<Loader />}>
+      <Bodyfriend />
+    </Suspense>
       </div>
     </div>
   )
