@@ -4,10 +4,8 @@ import Body from './home/Body'
 
 const Mainbody = () => {
   return (
-    <div>
+    <div >
       <Body />
-
-      
     </div>
   )
 }

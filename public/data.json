@@ -7,9 +7,9 @@
     "days_since_contact": 18,
     "status": "Overdue",
     "tags": ["WORK"],
-    "bio": "Worked together on final year thesis about machine learning applications.",
+    "bio": "ML thesis project collaboration",
     "goal": 14,
-    "next_due_date": "2026-04-01"
+    "next_due_date": "Apr 1, 2026"
   },
   {
     "id": 2,
@@ -19,9 +19,9 @@
     "days_since_contact": 10,
     "status": "Almost due",
     "tags": ["OFFICE"],
-    "bio": "Colleague from internship, collaborated on frontend development tasks.",
+    "bio": "Internship colleague, frontend dev work",
     "goal": 14,
-    "next_due_date": "2026-04-17"
+    "next_due_date": "Apr 17, 2026"
   },
   {
     "id": 3,
@@ -31,9 +31,9 @@
     "days_since_contact": 5,
     "status": "On-track",
     "tags": ["SCHOOL"],
-    "bio": "School friend, still keep in touch regularly and share personal updates.",
+    "bio": "School friend, regular updates",
     "goal": 14,
-    "next_due_date": "2026-04-22"
+    "next_due_date": "Apr 22, 2026"
   },
   {
     "id": 4,
@@ -43,9 +43,9 @@
     "days_since_contact": 20,
     "status": "Overdue",
     "tags": ["GYM"],
-    "bio": "Met at gym, used to train together for strength and fitness goals.",
+    "bio": "Gym partner for strength training",
     "goal": 10,
-    "next_due_date": "2026-03-30"
+    "next_due_date": "Mar 30, 2026"
   },
   {
     "id": 5,
@@ -55,9 +55,9 @@
     "days_since_contact": 12,
     "status": "Almost due",
     "tags": ["NEIGHBOR"],
-    "bio": "Neighbor since childhood, families are closely connected.",
+    "bio": "Childhood neighbor, close families",
     "goal": 14,
-    "next_due_date": "2026-04-15"
+    "next_due_date": "Apr 15, 2026"
   },
   {
     "id": 6,
@@ -67,9 +67,9 @@
     "days_since_contact": 3,
     "status": "On-track",
     "tags": ["FAMILY"],
-    "bio": "Working together on a startup idea related to productivity tools.",
+    "bio": "Startup partner on productivity tools",
     "goal": 7,
-    "next_due_date": "2026-04-17"
+    "next_due_date": "Apr 17, 2026"
   },
   {
     "id": 7,
@@ -79,9 +79,9 @@
     "days_since_contact": 16,
     "status": "Overdue",
     "tags": ["CONFERENCE"],
-    "bio": "Met at a tech conference, discussed AI research collaboration.",
+    "bio": "Met at tech conference, AI discussion",
     "goal": 14,
-    "next_due_date": "2026-04-05"
+    "next_due_date": "Apr 5, 2026"
   },
   {
     "id": 8,
@@ -91,9 +91,9 @@
     "days_since_contact": 13,
     "status": "Almost due",
     "tags": ["FAMILY"],
-    "bio": "Worked as a freelance developer for his e-commerce website project.",
+    "bio": "Freelance dev for e-commerce project",
     "goal": 14,
-    "next_due_date": "2026-04-14"
+    "next_due_date": "Apr 14, 2026"
   },
   {
     "id": 9,
@@ -103,9 +103,9 @@
     "days_since_contact": 2,
     "status": "On-track",
     "tags": ["FAMILY"],
-    "bio": "Guides me in career decisions and helps with interview preparation.",
+    "bio": "Career guidance & interview help",
     "goal": 10,
-    "next_due_date": "2026-04-21"
+    "next_due_date": "Apr 21, 2026"
   },
   {
     "id": 10,
@@ -115,8 +115,8 @@
     "days_since_contact": 22,
     "status": "Overdue",
     "tags": ["UNIVERSITY"],
-    "bio": "Part of the programming club, used to organize coding contests together.",
+    "bio": "Programming club, coding contests",
     "goal": 14,
-    "next_due_date": "2026-03-28"
+    "next_due_date": "Mar 28, 2026"
   }
 ]

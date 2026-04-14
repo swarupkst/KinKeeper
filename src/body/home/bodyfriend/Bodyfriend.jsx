@@ -1,4 +1,5 @@
 import React, {use} from 'react'
+import { Link } from 'react-router'
 
 
       const friendPromise = fetch('/data.json')
@@ -14,11 +15,12 @@ const friend = use(friendPromise)
 
     <div className='px-4 md:px-8 '>
       <h2 className='font-semibold text-xl'>Your Friends </h2>
+  
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6 pb-20'>
         
     {
       friend.map(friends => {
-        return <div key={friends.id} className='flex flex-col gap-2 justify-center items-center bg-white p-6 text-center rounded-xl shadow-sm'>
+        return <Link to={`/friend/${friends.id}`}> <div key={friends.id} className='flex flex-col gap-2 justify-center items-center bg-white p-6 text-center rounded-xl shadow-sm'>
             <img className='rounded-full' src={friends.picture}></img>
             <h4 className='text-2xl font-semibold'>{friends.name}</h4>
             <p>{friends.days_since_contact}d ago</p>
@@ -32,8 +34,19 @@ const friend = use(friendPromise)
     </p>
   ))}
 </div>
-            <p>{friends.status}</p>
+            <p 
+  className={`px-3 py-1 rounded-full text-white font-medium
+    ${friends.status === "Almost due" ? "bg-[#EFAD44]" : ""}
+    ${friends.status === "Overdue" ? "bg-[#EF4444]" : ""}
+    ${friends.status === "On-track" ? "bg-[#244D3F]" : ""}
+  `}
+>
+  {friends.status}
+</p>
+   
+
         </div>
+        </Link> 
 
       })
       }

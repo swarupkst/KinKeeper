@@ -6,6 +6,7 @@ import Body from './body/home/Body'
 import Stats from './body/stats/Stats';
 import Timeline from './body/timeline/Timeline';
 import ErrorPage from './component/ErrorPage';
+import FriendDetails from './body/friend details/FriendDetails';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/timeline" element={<Timeline />} />
         <Route path="/stats" element={<Stats />} />
         <Route path="*" element={<ErrorPage />} />
+        <Route path="/friend/:id" element={<FriendDetails />} />
       </Routes>
 
       <Footer />
