@@ -65,7 +65,7 @@ const Left = ({ setFriendName }) => {
           </p>
 
           <p className='text-[#64748B]'>
-            Preferred: {friend.email}
+             {friend.email}
           </p>
         </div>
 
