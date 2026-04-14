@@ -6,7 +6,7 @@ import FooterImg from "../assets/logo-xl.png"
 const Keenkeeper = () => {
   return (
     <div>
-      <div className='flex flex-col justify-center items-center gap-4 py-10 pt-20'>
+      <div className='flex flex-col justify-center items-center gap-4 py-10 px-4 pt-20'>
         <img src={FooterImg} alt="logo" />
         <p className='text-white text-center'>Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
         <div>

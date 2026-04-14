@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
-import { PieChart, Pie, Cell, Tooltip } from "recharts"
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts"
 
-const COLORS = ["#7C3AED", "#22C55E", "#1F2937"] // purple, green, dark
+const COLORS = ["#7C3AED", "#22C55E", "#1F2937"]
 
 const Stats = () => {
   const [data, setData] = useState([])
@@ -40,23 +40,21 @@ const Stats = () => {
   }, [filter])
 
   return (
-    <div className="w-10/12 mx-auto my-20">
+    <div className="w-full max-w-10/12 mx-auto  sm:px-6 lg:px-8 my-10 sm:my-16">
 
       {/* Title */}
-      <h2 className="text-3xl font-bold text-gray-800 mb-4">
+      <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
         Friendship Analytics
       </h2>
 
       {/* Card */}
-      <div className="bg-white rounded-xl border border-gray-200 p-6">
+      <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-6">
 
         {/* Header */}
-        <div className="flex justify-between items-center mb-6">
-          <p className="font-medium text-[#244D3F]">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mb-6">
+          <p className="font-medium text-[#244D3F] text-sm sm:text-base">
             By Interaction Type
           </p>
-
-        
         </div>
 
         {/* Chart */}
@@ -65,26 +63,31 @@ const Stats = () => {
             No interaction data yet
           </p>
         ) : (
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center w-full">
 
-            <PieChart width={250} height={250}>
-              <Pie
-                data={data}
-                dataKey="value"
-                innerRadius={70}   // ✅ makes it donut
-                outerRadius={100}
-                paddingAngle={4}
-                cornerRadius={8}
-              >
-                {data.map((entry, index) => (
-                  <Cell key={index} fill={COLORS[index]} />
-                ))}
-              </Pie>
-              <Tooltip />
-            </PieChart>
+            {/* Responsive Chart */}
+            <div className="w-full h-[250px] sm:h-[300px]">
+              <ResponsiveContainer>
+                <PieChart>
+                  <Pie
+                    data={data}
+                    dataKey="value"
+                    innerRadius="60%"
+                    outerRadius="80%"
+                    paddingAngle={4}
+                    cornerRadius={8}
+                  >
+                    {data.map((entry, index) => (
+                      <Cell key={index} fill={COLORS[index]} />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                </PieChart>
+              </ResponsiveContainer>
+            </div>
 
-            {/* Custom Legend (bottom center like image) */}
-            <div className="flex gap-6 mt-4 text-sm text-gray-600">
+            {/* Legend */}
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-4 text-xs sm:text-sm text-gray-600">
               {data.map((item, index) => (
                 <div key={index} className="flex items-center gap-2">
                   <span
@@ -98,7 +101,6 @@ const Stats = () => {
 
           </div>
         )}
-
       </div>
     </div>
   )

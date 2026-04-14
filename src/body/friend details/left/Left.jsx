@@ -9,37 +9,38 @@ const Left = ({ setFriendName }) => {
   const [friend, setFriend] = useState(null)
 
   useEffect(() => {
-  fetch('/data.json')
-    .then(res => res.json())
-    .then(data => {
-      const found = data.find(f => f.id == id)
-      setFriend(found)
+    fetch('/data.json')
+      .then(res => res.json())
+      .then(data => {
+        const found = data.find(f => f.id == id)
+        setFriend(found)
 
-      // ✅ name send to parent
-      setFriendName(found.name)
-    })
-}, [id])
+        setFriendName(found.name)
+      })
+  }, [id])
 
-  if (!friend) return <p>Loading...</p>
+  if (!friend) return <p className="text-center">Loading...</p>
 
   return (
-    <div className="text-center">
+    <div className="text-center px-3 sm:px-0">
 
-      <div className='flex flex-col gap-3'>
+      <div className="flex flex-col gap-4 sm:gap-6">
 
         {/* Friend Card */}
-        <div className='flex flex-col gap-2 justify-center items-center bg-white p-5 text-center rounded-xl shadow-sm'>
+        <div className="flex flex-col gap-3 justify-center items-center bg-white p-4 sm:p-5 text-center rounded-xl shadow-sm w-full max-w-sm mx-auto">
 
           <img
-            className='rounded-full w-20'
+            className="rounded-full w-16 sm:w-20"
             src={friend.picture}
             alt={friend.name}
           />
 
-          <h4 className='text-2xl font-semibold'>{friend.name}</h4>
+          <h4 className="text-xl sm:text-2xl font-semibold">
+            {friend.name}
+          </h4>
 
           <p
-            className={`px-3 py-1 rounded-full text-white font-medium
+            className={`px-3 py-1 rounded-full text-white font-medium text-xs sm:text-sm
               ${friend.status === "Almost due" ? "bg-[#EFAD44]" : ""}
               ${friend.status === "Overdue" ? "bg-[#EF4444]" : ""}
               ${friend.status === "On-track" ? "bg-[#244D3F]" : ""}
@@ -53,36 +54,36 @@ const Left = ({ setFriendName }) => {
             {friend.tags?.map((tag, index) => (
               <p
                 key={index}
-                className="bg-[#CBFADB] py-1 px-2 rounded-full font-medium text-sm"
+                className="bg-[#CBFADB] py-1 px-2 rounded-full font-medium text-xs sm:text-sm"
               >
                 {tag}
               </p>
             ))}
           </div>
 
-          <p className='text-lg font-medium italic text-[#64748B]'>
+          <p className="text-base sm:text-lg font-medium italic text-[#64748B]">
             "{friend.bio}"
           </p>
 
-          <p className='text-[#64748B]'>
-             {friend.email}
+          <p className="text-sm sm:text-base text-[#64748B] break-all">
+            {friend.email}
           </p>
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 w-full max-w-sm mx-auto">
 
-          <div className="flex items-center justify-center gap-3 px-4 py-3 bg-white border border-gray-200 rounded-sm shadow-sm cursor-pointer hover:shadow-md hover:bg-gray-50 transition">
+          <div className="flex items-center justify-center gap-3 px-4 py-3 bg-white border border-gray-200 rounded-sm shadow-sm cursor-pointer hover:shadow-md hover:bg-gray-50 transition w-full">
             <RiNotificationSnoozeLine className="text-lg" />
             <p className="text-sm font-medium">Snooze 2 Weeks</p>
           </div>
 
-          <div className="flex items-center justify-center gap-3 px-4 py-3 bg-white border border-gray-200 rounded-sm shadow-sm cursor-pointer hover:shadow-md hover:bg-gray-50 transition">
+          <div className="flex items-center justify-center gap-3 px-4 py-3 bg-white border border-gray-200 rounded-sm shadow-sm cursor-pointer hover:shadow-md hover:bg-gray-50 transition w-full">
             <FiArchive className="text-lg" />
             <p className="text-sm font-medium">Archive</p>
           </div>
 
-          <div className="flex items-center justify-center gap-3 px-4 py-3 bg-white border border-gray-200 rounded-sm shadow-sm cursor-pointer hover:shadow-md hover:bg-red-50 transition">
+          <div className="flex items-center justify-center gap-3 px-4 py-3 bg-white border border-gray-200 rounded-sm shadow-sm cursor-pointer hover:shadow-md hover:bg-red-50 transition w-full">
             <RiDeleteBin5Line className="text-lg text-red-500" />
             <p className="text-sm font-medium text-red-500">Delete</p>
           </div>

@@ -8,7 +8,7 @@ const Body = () => {
 
   return (
     <div className='bg-[#F8FAFC]'>
-      <div className='w-full sm:w-10/12 mx-auto '>
+      <div className='w-full sm:w-11/12 md:10/12 mx-auto '>
         <Bodytop />
         <hr className='text-[#E9E9E9] mx-5 sm:mx-8 pt-10' />
             <Suspense fallback={<Loader />}>
