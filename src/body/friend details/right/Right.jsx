@@ -2,11 +2,11 @@ import React from 'react'
 import RightTop from './RightTop'
 import RightBottom from './RightBottom'
 
-const Right = () => {
+const Right = ({name}) => {
   return (
     <div>
       <RightTop />
-      <RightBottom />
+      <RightBottom name={name} />
     </div>
   )
 }

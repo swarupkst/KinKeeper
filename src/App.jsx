@@ -16,8 +16,8 @@ const App = () => {
         <Route path="/" element={<Body />} />
         <Route path="/timeline" element={<Timeline />} />
         <Route path="/stats" element={<Stats />} />
-        <Route path="*" element={<ErrorPage />} />
         <Route path="/friend/:id" element={<FriendDetails />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
 
       <Footer />

@@ -42,7 +42,7 @@
     "email": "imran.hossain@outlook.com",
     "days_since_contact": 20,
     "status": "Overdue",
-    "tags": ["GYM"],
+    "tags": ["GYM","TRAVEL"],
     "bio": "Gym partner for strength training",
     "goal": 10,
     "next_due_date": "Mar 30, 2026"
