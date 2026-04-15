@@ -1,9 +1,9 @@
-# 📌 KinKeeper
+# 📌 KeenKeeper
 
 🔗 Live Site: https://keenkeeper-by-swarup.netlify.app/
 
 ## 📝 Project Description
-KinKeeper is a simple and user-friendly friendship tracking web application. It allows users to manage interactions such as calls, texts and video chats with friends. The app helps users keep track of their communication history in an organized timeline.
+KeenKeeper is a simple and user-friendly friendship tracking web application. It allows users to manage interactions such as calls, texts and video chats with friends. The app helps users keep track of their communication history in an organized timeline.
 
 ## 🚀 Technologies Used
 - React.js
