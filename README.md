@@ -1,16 +1,32 @@
-# React + Vite
+# 📌 KinKeeper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔗 Live Site: https://keenkeeper-by-swarup.netlify.app/
 
-Currently, two official plugins are available:
+## 📝 Project Description
+KinKeeper is a simple and user-friendly friendship tracking web application. It allows users to manage interactions such as calls, texts and video chats with friends. The app helps users keep track of their communication history in an organized timeline.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Technologies Used
+- React.js
+- Tailwind CSS
+- React Router DOM
+- Local Storage (for data persistence)
+- React Icons
 
-## React Compiler
+## ✨ Key Features
+1. 📊 **Friend Interaction Timeline**  
+   Track all activities like calls, messages, and video chats in a clean timeline view.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. 🔍 **Dynamic Filtering System**  
+   Easily filter interactions based on type (call, text, video) for better insights.
 
-## Expanding the ESLint configuration
+3. 💾 **Local Storage Integration**  
+   All data is saved in the browser, so your information stays even after refreshing.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎯 Purpose
+This project was built to practice React fundamentals, state management, and UI design while creating a useful real-life application.
+
+## 📷 UI Highlights
+- Clean and responsive design
+- Sidebar navigation with active states
+- Interactive timeline and list views
+
